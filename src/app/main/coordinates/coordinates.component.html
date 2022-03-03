@@ -1,0 +1,57 @@
+<form id="coordinates" class="black-white_background">
+  <div class="coordinates-wrapper">
+    <h1>Hey, Rocketeer, what are your coordinates?</h1>
+    <div class="coordinates-input">
+      <input
+        required
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+        (change)="onChangeName($event)"
+      />
+    </div>
+    <div id="lastName" class="coordinates-input">
+      <input
+        required
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        (change)="onChangeLastName($event)"
+      />
+    </div>
+    <div id="email" class="coordinates-input">
+      <input
+        required
+        type="email"
+        name="email"
+        placeholder="Email"
+        (change)="onChangeEmail($event)"
+      />
+    </div>
+    <div id="phoneNumber" class="coordinates-input">
+      <input
+        type="number"
+        name="phone"
+        placeholder="+995 5__ ___ ___"
+        (change)="onChangePhoneNumber($event)"
+        id="number"
+      />
+    </div>
+    <p *ngIf="showError" class="error-msg">{{ errorMsg }}</p>
+    <p id="requireName" class="required-fields">*</p>
+    <p id="requireLastname" class="required-fields">*</p>
+    <p id="requireEmail" class="required-fields">*</p>
+  </div>
+  <div class="some-description">
+    <h1>Redberry Origins</h1>
+    <p>
+      You watch “What? Where? When?” Yeah. Our founders used to play it. That's
+      where they got a question about a famous American author and screenwriter
+      Ray Bradbury. Albeit, our CEO Gaga Darsalia forgot the exact name and he
+      answered Ray Redberry. And at that moment, a name for a yet to be born
+      company was inspired - Redberry 😇
+    </p>
+  </div>
+
+  <app-pagination (changeSection)="onChangeSection()"></app-pagination>
+</form>

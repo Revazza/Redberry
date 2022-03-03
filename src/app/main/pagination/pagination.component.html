@@ -1,0 +1,12 @@
+
+<div class="pagination">
+    <div (click)="onClickPrev()" id="prev" class="prev-next"></div>
+
+    <div [ngClass]=" active > 0 ? 'circles active':'circles'" id="first" ></div>
+    <div [ngClass]=" active > 1 ? 'circles active':'circles'" id="second" class="circles"></div>
+    <div [ngClass]=" active > 2 ? 'circles active':'circles'" id="third" class="circles"></div>
+    <div [ngClass]=" active > 3 ? 'circles active':'circles'" id="fourth" class="circles"></div>
+    <div [ngClass]=" active > 4 ? 'circles active':'circles'" id="fifth" class="circles"></div>
+    
+    <div (click)="onClickNext()" id="next" class="prev-next"></div>
+</div>

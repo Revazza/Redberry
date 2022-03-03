@@ -1,0 +1,65 @@
+
+
+
+.pagination{
+    position: absolute;
+    width: 231px;
+    height: 19px;
+    left: 321px;
+    top: 904px;
+
+}
+
+.prev-next{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+#prev{ 
+    background-image: url('../../../assets/img/previous.png');
+    background-repeat: no-repeat;   
+}
+
+#next{
+    left: 227px;
+    background-image: url('../../../assets/img/next.png');
+    background-repeat: no-repeat;   
+}
+
+
+
+.circles{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: #FE3B1F;
+    border-radius: 100%;
+    opacity: 0.2;
+    cursor: pointer;
+
+}
+
+.active{
+    opacity: 1;
+}
+
+#first{
+    left: 40px;
+}
+#second{
+    left: 76px;
+}
+#third{
+    left: 112px;
+}
+#fourth{
+    left: 148px;
+}
+
+#fifth{
+    left: 184px;
+}
+
+

@@ -1,0 +1,14 @@
+
+
+
+<app-welcome *ngIf="section === 'welcome'" (changeSection)="onChangeSection($event)">
+
+</app-welcome>
+
+
+<app-coordinates *ngIf="section ==='coordinates'" (setCoordinates)="onAddCoordinates($event)" >
+</app-coordinates>
+
+
+
+

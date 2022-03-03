@@ -1,0 +1,172 @@
+
+
+
+#coordinates{
+    display:flex;
+}
+
+.some-description{
+    position: absolute;
+    width: 50%;
+    height: 1080px;
+    left: 960px;
+    top: 0px;
+
+    /* Primary BG */
+
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+}
+
+
+.coordinates-wrapper h1{
+    position: absolute;
+    width: 716px;
+    height: 128px;
+    left: 105px;
+    top: 81px;
+
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 79px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Redberry Red */
+
+    color: #FE3B1F;
+}
+
+
+.coordinates-input{
+    position: absolute;
+    width: 455px;
+    height: 54px;
+    left: 235px;
+    top: 390px;
+
+    background: #FFFFFF;
+    /* Primary Stroke */
+
+    border: 1px solid #525557;
+    box-sizing: border-box
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.coordinates-input input{
+    position: absolute;
+    width: 195px;
+    height: 24px;
+    left: 60px;
+    top: 12px;
+
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+
+    color: #454545;
+    outline: none;
+    border: none;
+}
+
+.coordinates-input input:focus{
+    border-bottom: 1px solid #525557b0;
+}
+
+#lastName{
+    top: 490px;
+}
+#email{
+    top: 590px;
+}
+#phoneNumber{
+    top: 690px;
+}
+
+.required-fields{
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    left: 210px;
+
+}
+
+#requireName{
+    top: 374px;
+}
+#requireLastname{
+    top: 473px;
+}
+#requireEmail{
+    top: 573px;
+}
+
+
+
+.some-description h1{
+    position: absolute;
+    width: 716px;
+    height: 94px;
+    left: 200px;
+    top: 81px;
+
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 79px;
+    display: flex;
+    align-items: center;
+
+    /* Redberry Red */
+
+    color: #FE3B1F;
+}
+
+.some-description p{
+    position: absolute;
+    width: 705px;
+    height: 606px;
+    left: 200px;
+    top: 195px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 200%;
+    /* or 48px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+
+    color: #ffffffcc;
+}
+
+.error-msg{
+    font-family: Rowdies;
+    font-size: 20px;
+    color: #FE3B1F;
+    position: absolute;
+    bottom: 230px;
+    left: 370px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
