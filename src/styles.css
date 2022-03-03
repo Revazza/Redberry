@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat&family=Rowdies&family=Shizuru&family=Sora:wght@200&family=Supermercado+One&display=swap');
+
+body,html{
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+
+.black-white_background{
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+
+    background: #FFFFFF;
+}
+
+
+

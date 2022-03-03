@@ -1,0 +1,129 @@
+
+
+
+
+.welcome-page{
+    position: relative;
+    
+    width: 1920px;
+    height: 1080px;
+
+    /* Primary BG */
+
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+
+    /* Primary BG */
+
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.star-img{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+
+    background: url('../../../assets/img/stars.png');
+}
+
+.rocketman-img{
+    position: absolute;
+    width: 409.92px;
+    height: 410.45px;
+    left: 691px;
+    top: 634px;
+
+    background: url('../../../assets/img/rocketman.png');
+
+    
+    
+}
+
+.welcome-title{
+    position: absolute;
+    width: 1090px;
+    height: 212px;
+    left: 508px;
+    top: 105px;
+
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 119px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Redberry Red */
+
+    color: #FE3B1F;
+}
+
+.questionnaire-btn{
+    position: absolute;
+    width: 395px;
+    height: 79px;
+    left: 780px;
+    top: 492px;
+
+    background: #FE3B1F;
+    border-radius: 50px;
+}
+
+.questionnaire-btn button{
+    position: absolute;
+    width: 395px;
+    height: 79px;
+    left: 0px;
+    top: 0px;
+
+    mix-blend-mode: normal;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: transparent;
+    border-radius: 50px;
+    border: none;
+    
+   font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #ffffffc7;
+
+    cursor: pointer;
+
+}
+
+
+.nav-applications{
+    position: absolute;
+    width: 338px;
+    height: 66px;
+    left: 838px;
+    top: 589px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #ffffffc7;
+}
+
+
+
