@@ -1,0 +1,255 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.black-white_background h1{
+    position: absolute;
+    width: 788px;
+    height: 175px;
+    left: 85px;
+    top: 38px;
+
+    margin: 0;
+
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 79px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Redberry Red */
+
+    color: #FE3B1F;
+}
+
+
+.skills-list{
+    position: absolute;
+    width: 455px;
+    height: 187px;
+    left: 230px;
+    top: 366px;
+    
+
+}
+.skills-list p{
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.skills-wrapper{
+    width: 455px;
+    height: 50px;
+    background: #FFFFFF;
+    /* Primary Stroke */
+
+    border: 1px solid #525557;
+    box-sizing: border-box;
+    padding-left: 46px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+    right: 13px;
+}
+
+.skills-list-wrapper{
+    padding: 0;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    background-color: #FFFFFF;
+    
+    border: 1px solid #525557;
+    border-top: none;
+}
+
+.skills-list-wrapper li{
+    list-style: none;
+    padding-left: 46px;
+    padding-top: 10px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.skills-list-wrapper div{
+    width: 453px;
+    height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.skills-list-wrapper div:hover{
+    background-color: #52555734;
+}
+
+.active{
+    transform: rotate(180deg);
+}
+
+.experience-wrapper{
+    width: 455px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #525557a8;
+    box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.experience-wrapper input{
+    width: 220px;
+    height: 20px;
+    border: none;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    outline: none;
+}
+
+.experience-wrapper input:focus{
+    border-bottom:1px solid #52555770;
+}
+
+.add-skills-btn{
+    position: absolute;
+    width: 211px;
+    height: 32px;
+    left: 244px;
+    bottom: 0;
+
+    /* Redberry Red */
+    background: #FE3B1F;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+
+    color: #ffffffb2;
+    border: none;
+    cursor: pointer;
+}
+
+.add-skills-btn:hover{
+    color: #ffffffe3;
+}
+
+.instruction{
+    margin: 0;
+    color: #FE3B1F;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 15px;
+    position: absolute;
+    bottom: 5px;
+}
+
+
+.added-skills{
+    width: 480px;
+    height: 280px;
+    background: #FFFFFF;
+    position: absolute;
+    bottom: 220px;
+    left: 230px;
+    overflow: auto;
+    overflow-x: hidden;
+    
+}
+
+.added-skills::-webkit-scrollbar {
+  width: 4px;
+
+}
+
+.added-skills::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+.added-skills::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #FE3B1F;
+}
+
+.choosen-skill{
+    width: 443px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid black;
+    position: initial;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.choosen-skill p{
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 16px;
+    font-style: italic;
+    position: absolute;
+}
+
+.skill-p{
+    left: 30px;
+}
+.exp-p{
+    left: 120px;
+}
+
+.remove-skill{
+    position: absolute;
+    right: 36px;
+    cursor: pointer;
+}
+
+
+#descr-title{
+    left: 137px;
+    margin: 0;
+    font-size: 64px;
+    color: #fe3d1fdc;
+}
+
+#descr-p{
+    position: absolute;
+    width: 705px;
+    height: 606px;
+    left: 137px;
+    top: 210px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 200%;
+    /* or 48px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+
+    color: #ffffffc9;
+}

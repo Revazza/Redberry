@@ -1,0 +1,59 @@
+<div class="black-white_background">
+  <div class="covid-questions">
+    <h1>Covid Stuff</h1>
+
+    <div class="pref-workplace">
+      <p>How would you prefeer to work</p>
+      <div class="radio-btn">
+        <input
+          type="radio"
+          name="workplace"
+          (click)="onChooseWorkPlace('from_sairme_office')"
+        />
+        <label for="from sairme office">From Sairme Office</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          type="radio"
+          name="workplace"
+          (click)="onChooseWorkPlace('from_home')"
+        />
+        <label for="from home">From Home</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          type="radio"
+          name="workplace"
+          (click)="onChooseWorkPlace('hybrid')"
+        />
+        <label for="hybrid">Hybrid</label>
+      </div>
+    </div>
+
+    <div class="contact-covid">
+      <p>Did you contact covid?:(</p>
+      <div class="radio-btn">
+        <input type="radio" name="contacted" />
+        <label for="yes">Yes</label>
+      </div>
+      <div class="radio-btn">
+        <input type="radio" name="contacted" />
+        <label for="no">No</label>
+      </div>
+    </div>
+  </div>
+
+  <div id="description" class="some-description">
+    <h1>Redberry Covid Policies</h1>
+    <p>
+      As this infamous pandemic took over the world, we adjusted our working
+      practices so that our employees can be as safe and comfortable as
+      possible. We have a hybrid work environment, so you can either work from
+      home or visit our lovely office on Sairme Street. If it was up to us, we
+      would love you to see us in the office because we think face-to-face
+      communications > Zoom meetings. Both on the fun and productivity scales.
+    </p>
+  </div>
+</div>
+
+<app-pagination></app-pagination>

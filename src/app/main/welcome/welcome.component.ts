@@ -15,8 +15,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   onQuestionnaireClick(){
-    this.changeSection.emit('coordinates');
-    
+    this.changeSection.emit(1);
   }
 
 

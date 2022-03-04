@@ -15,5 +15,17 @@ body,html{
     background: #FFFFFF;
 }
 
+.some-description{
+    position: absolute;
+    width: 50%;
+    height: 1080px;
+    left: 960px;
+    top: 0px;
+
+    /* Primary BG */
+
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+}
+
 
 

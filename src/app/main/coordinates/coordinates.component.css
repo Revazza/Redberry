@@ -5,18 +5,6 @@
     display:flex;
 }
 
-.some-description{
-    position: absolute;
-    width: 50%;
-    height: 1080px;
-    left: 960px;
-    top: 0px;
-
-    /* Primary BG */
-
-    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
-}
-
 
 .coordinates-wrapper h1{
     position: absolute;
@@ -78,7 +66,9 @@ input::-webkit-inner-spin-button {
     color: #454545;
     outline: none;
     border: none;
+    z-index: 1;
 }
+
 
 .coordinates-input input:focus{
     border-bottom: 1px solid #525557b0;
@@ -157,12 +147,21 @@ input::-webkit-inner-spin-button {
 
 .error-msg{
     font-family: Rowdies;
-    font-size: 20px;
+    font-size: 19px;
     color: #FE3B1F;
     position: absolute;
     bottom: 230px;
-    left: 370px;
+    left: 330px;
     letter-spacing: 2px;
+}
+
+
+.input-checker{
+    height: 410px;
+    width: 540px;
+    position: absolute;
+    top: 360px;
+    left: 200px;
 }
 
 

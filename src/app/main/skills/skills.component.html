@@ -1,0 +1,62 @@
+<div class="black-white_background">
+  <h1>Tell us about your skills</h1>
+
+  <div class="skills-list">
+    <div class="skills-wrapper" (click)="onShowDropdown()">
+      <p>{{ currentSkill }}</p>
+      <img
+        *ngIf="!showDropdown"
+        class="dropdown"
+        src="../../../assets/img/dropdown.png"
+        alt=""
+      />
+      <img
+        *ngIf="showDropdown"
+        class="dropdown active"
+        src="../../../assets/img/dropdown.png"
+        alt=""
+      />
+    </div>
+    <ul *ngIf="showDropdown" class="skills-list-wrapper">
+      <div *ngFor="let skills of skillsList">
+        <li id="{{ skills.id }}" (click)="onSkillsClick($event)">
+          {{ skills.title }}
+        </li>
+      </div>
+    </ul>
+    <div class="experience-wrapper">
+      <input
+        (change)="onChangeExp($event)"
+        type="text"
+        placeholder="Experience Duration In Years"
+      />
+    </div>
+    <button (click)="onAddSkill()" class="add-skills-btn">
+      Add Programming Language
+    </button>
+    <p class="instruction">Choose At Least 1 Skills</p>
+  </div>
+
+  <div class="added-skills">
+    <div
+      class="choosen-skill"
+      *ngFor="let skill of skillsArray"
+      >
+      <p class="skill-p">{{ skill.title }}</p>
+      <p class="exp-p">Years Of Experience:{{ skill.experience }}</p>
+      <img
+        (click)="onDeleteSkill($event)"
+        id="{{ skill.id }}"
+        class="remove-skill"
+        src="../../../assets/img/remove-skill.png"
+        alt="remove skill"
+      />
+    </div>
+  </div>
+  <div class="some-description">
+    <h1 id="descr-title">A bit about our battles</h1>
+    <p id="descr-p">As we said, Redberry has been on the field for quite some time now, and we have touched and embraced a variety of programming languages, technologies, philosophies, and frameworks. We are battle-tested in PHP Laravel Stack with Vue.js, refined in React, and allies with Serverside technologies like Docker and Kubernetes, and now we have set foot in the web3 industry.</p>
+  </div>
+</div>
+
+<app-pagination [canGoNext]="canGoNext" (setSection)="setSection($event)" [currentSection]="2" ></app-pagination>

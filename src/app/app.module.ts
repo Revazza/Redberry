@@ -7,6 +7,9 @@ import { WelcomeComponent } from './main/welcome/welcome.component';
 import { MainComponent } from './main/main.component';
 import { CoordinatesComponent } from './main/coordinates/coordinates.component';
 import { PaginationComponent } from './main/pagination/pagination.component';
+import { SkillsComponent } from './main/skills/skills.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CovidStuffComponent } from './main/covid-stuff/covid-stuff.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { PaginationComponent } from './main/pagination/pagination.component';
     WelcomeComponent,
     MainComponent,
     CoordinatesComponent,
-    PaginationComponent
+    PaginationComponent,
+    SkillsComponent,
+    CovidStuffComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+     HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
