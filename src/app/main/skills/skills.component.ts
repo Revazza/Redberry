@@ -49,7 +49,8 @@ export class SkillsComponent implements OnInit {
         }
       }
 
-      // console.log('This skills in ngOnInit', this.applicant.skills);
+      if(this.skillsArray.length !== 0)
+        this.canGoNext = true;
     });
 
 

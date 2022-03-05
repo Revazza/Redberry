@@ -30,11 +30,11 @@ export class MainComponent implements OnInit {
     },
     {
       id: 2,
-      canGo: false,
+      canGo: true,
     },
     {
       id: 3,
-      canGo: false,
+      canGo: true,
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log('[Paths in init]',this.paths);
+    // console.log('[Paths in init]',this.paths);
   }
 
   onChangeSection(section: any) {
@@ -58,26 +58,26 @@ export class MainComponent implements OnInit {
 
       this.paths[objIndex].canGo = true;
 
-      console.log('[PATHS]',this.paths);
-      console.log('[APPLICANT]',this.applicant);
+      // console.log('[PATHS]',this.paths);
+      // console.log('[APPLICANT]',this.applicant);
     }
 
     this.section = section;
 
-    console.log('[CURRENT SECTION]',this.section);
+    // console.log('[CURRENT SECTION]',this.section);
   }
 
   onAddCoordinates(coordinates: any) {
 
-    console.log('[BEFORE] ',this.applicant);
+    // console.log('[BEFORE] ',this.applicant);
     
     this.applicant = { ...this.applicant, ...coordinates };
 
-    console.log('[AFTER] ', this.applicant);
+    // console.log('[AFTER] ', this.applicant);
 
   }
 
   setSkills(skills: any) {
-    console.log(skills);
+    // console.log(skills);
   }
 }

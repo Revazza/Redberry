@@ -1,27 +1,31 @@
-<div class="black-white_background">
+<form class="black-white_background" id="test">
+  <h1 id="covid-h">Covid Stuff</h1>
   <div class="covid-questions">
-    <h1>Covid Stuff</h1>
-
     <div class="pref-workplace">
       <p>How would you prefeer to work</p>
       <div class="radio-btn">
         <input
+          id="from_sairme_office"
           type="radio"
           name="workplace"
           (click)="onChooseWorkPlace('from_sairme_office')"
+          required
         />
         <label for="from sairme office">From Sairme Office</label>
       </div>
       <div class="radio-btn">
         <input
+          id="from_home"
           type="radio"
           name="workplace"
           (click)="onChooseWorkPlace('from_home')"
+          required
         />
         <label for="from home">From Home</label>
       </div>
       <div class="radio-btn">
         <input
+          id="hybrid"
           type="radio"
           name="workplace"
           (click)="onChooseWorkPlace('hybrid')"
@@ -33,12 +37,69 @@
     <div class="contact-covid">
       <p>Did you contact covid?:(</p>
       <div class="radio-btn">
-        <input type="radio" name="contacted" />
+        <input
+          id="hadCovid"
+          type="radio"
+          name="contacted"
+          (click)="onContactCovid('y')"
+          required
+        />
         <label for="yes">Yes</label>
       </div>
       <div class="radio-btn">
-        <input type="radio" name="contacted" />
+        <input
+          id="!hadCovid"
+          type="radio"
+          name="contacted"
+          (click)="onContactCovid('n')"
+          required
+        />
         <label for="no">No</label>
+      </div>
+      <div *ngIf="showCovidLoc" class="covid-location">
+        <p>When?</p>
+        <div class="loc-wrapper">
+          <p>Date</p>
+          <input type="date" (mouseleave)="onMouseLeaveCovidLocation($event)" />
+        </div>
+      </div>
+    </div>
+    <div class="vaccination-field">
+      <p>Have you been vaccinated</p>
+      <div class="radio-btn">
+        <input
+          id="vaccinated"
+          type="radio"
+          name="vaccination"
+          required
+          (click)="onVaccination('y')"
+        />
+        <label for="yes">Yes</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="!vaccinated"
+          type="radio"
+          name="vaccination"
+          required
+          (click)="onVaccination('n')"
+        />
+        <label for="no">No</label>
+      </div>
+      <div
+        *ngIf="showVaccination"
+        class="covid-location"
+        id="covid-vaccination"
+      >
+        <p>When did you get your last covid vaccine?</p>
+        <div class="loc-wrapper">
+          <p>Date</p>
+          <input
+            type="date"
+            required
+            (mouseleave)="onMouseLeaveVaccination($event)"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -54,6 +115,12 @@
       communications > Zoom meetings. Both on the fun and productivity scales.
     </p>
   </div>
-</div>
+</form>
 
-<app-pagination></app-pagination>
+<div id="pagination">
+  <app-pagination 
+  [canGoNext]="canGoNext" 
+  [currentSection]="3"
+  (setSection)="setSection($event)"
+  ></app-pagination>
+</div>

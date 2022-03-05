@@ -19,6 +19,10 @@
     color: #fe3d1fef;
 }
 
+
+
+
+
 .some-description p{
     position: absolute;
     width: 705px;
@@ -40,23 +44,40 @@
     color: #ffffffcb;
 }
 
-.covid-questions{
-    width: 700px;
-    height: 800px;
-    border: 1px solid black;
-    position: absolute;
-    left: 130px;
-    top: 50px;
-
-    overflow-y: auto;
-    overflow-x: hidden;
+#pagination{
+    position: relative;
+    bottom: 980px;
 }
 
-.covid-questions h1{
+.covid-questions{
+    width: 700px;
+    min-height: 700px;
+    position: absolute;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
+    margin: 0;
+    top:240px
+}
+
+.covid-questions::-webkit-scrollbar {
+  width: 2px;
+
+}
+
+.covid-questions::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+.covid-questions::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #FE3B1F;
+}
+
+.black-white h1{
     position: absolute;
     width: 788px;
-    height: 175px;
-    left: 171px;
+    height: 205px;
+    left: 291px;
     top: 0px;
     margin: 0;
 
@@ -68,28 +89,42 @@
     display: flex;
     align-items: center;
     text-align: center;
-
     /* Redberry Red */
-
     color: #FE3B1F;
 }
 
+#covid-h{
+    color: #FE3B1F;
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    position: absolute;
+    margin: 0;
+    top:90px;
+    left: 300px;
+
+}
+
 #decsription{
-    position: fixed;
+    /* position: fixed; */
 }
 
 .pref-workplace{
-    position: absolute;
-    top: 200px;
-    left: 120px;
+    margin-top: 20px;
+    margin-left:100px
 }
 
-.pref-workplace p,.contact-covid p{
+.pref-workplace p,
+.contact-covid p,
+.covid-location p,
+.vaccination-field{
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     color: #000000;
+    margin: 0;
 }
 
 .radio-btn{
@@ -104,15 +139,75 @@
 }
 .radio-btn input{
     cursor: pointer;
+    outline: none;
 }
 
 
 .contact-covid{
-    position: absolute;
-    left: 120px;
-    top: 370px;
+    margin-left:100px;
+    margin-top: 50px;
 }
 
+.covid-location{
+    width: 455px;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+#covid-vaccination{
+    margin-bottom: 0px;
+}
+
+.loc-wrapper{
+    width: calc(100% - 60px);
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #525557;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+}
+
+.loc-wrapper p{
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.loc-wrapper input{
+    width: 42px;
+    border: none;
+    outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url('../../../assets/img/calendar.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    position: relative;
+    right: 14px;
+    cursor: pointer;
+}
+
+.vaccination-field{
+    margin-left:100px;
+    margin-top: 40px;
+    /* 40px interval */
+}
+
+
+.covid-questions{
+    position: none;
+    margin-left: 130px; 
+}
 
 
 
