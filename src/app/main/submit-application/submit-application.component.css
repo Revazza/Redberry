@@ -1,0 +1,56 @@
+
+
+
+#submitApp{
+   background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+}
+
+
+.btns-wrapper{
+    position: absolute;
+    width: 190px;
+    height: 50px;
+}
+
+#submitApp button{
+    position: absolute;
+    height: 79px;
+    left: 758px;
+    top: 458px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+
+    padding: 10px 130px;
+    background: #FE3B1F;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+    color: #FFFFFF;
+}
+
+#submitApp p{
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    left: 890px;
+    top: 540px;
+
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #ffffffc7;
+    cursor: pointer;
+}
+

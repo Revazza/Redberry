@@ -1,0 +1,56 @@
+<form class="black-white_background">
+  <div class="about-applicant">
+    <h1>What about you?</h1>
+
+    <div class="devtalk-wrapper">
+      <label for="devtalk"
+        >Would you attend Devtalks and maybe also organize your own?</label
+      >
+      <div class="radio-btn">
+        <input id="devtalkTrue" type="radio" name="devtalk" (click)="onChooseDevtalk('y')" />
+        <label for="yes" >Yes</label>
+      </div>
+      <div class="radio-btn">
+        <input id="devtalkFalse" type="radio" name="devtalk" (click)="onChooseDevtalk('n')" />
+        <label for="no">No</label>
+      </div>
+    </div>
+
+    <div class="devtalk-text">
+      <label for="devtalk-text">What would you talk about at Devtalk</label>
+      <div class="devtalk-text-wrapper">
+        <textarea id="devtalkTxt" class="applicant-text" placeholder="I would..." (keyup)="onChangeAboutDevTalk($event)" ></textarea>
+      </div>
+    </div>
+
+    <div class="something-special">
+      <label for="special">Tell us something special</label>
+      <div id="special" class="devtalk-text-wrapper">
+        <textarea id="specialTxt" class="applicant-text" placeholder="I ..." (keyup)="onChangeSpecial($event)" ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="some-description">
+    <h1>Redberrian Insights</h1>
+    <p>
+      We were soo much fun before the pandemic started! Parties almost every
+      weekend and lavish employee birthday celebrations! Unfortunately, covid
+      ruined that fun like it did almost everything else in the world. But we
+      try our best to zhuzh it up a bit. For example, we host biweekly Devtalks
+      where our senior and lead developers talk about topics they are passionate
+      about. Previous topics have included Web3, NFT, Laravel 9, Kubernetes,
+      etc. We hold these talks in the office but you can join our Zoom broadcast
+      as well. Feel free to join either as an attendee or a speaker!
+    </p>
+  </div>
+</form>
+
+<div class="about-pag">
+  <app-pagination
+    [canGoNext]="canGoNext"
+    (setSection)="setSection($event)"
+    [currentSection]="4"
+  >
+  </app-pagination>
+</div>

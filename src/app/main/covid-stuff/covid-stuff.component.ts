@@ -6,24 +6,7 @@ import { Component,Output,EventEmitter,Input ,OnInit } from '@angular/core';
   styleUrls: ['./covid-stuff.component.css'],
 })
 export class CovidStuffComponent implements OnInit {
-  /*
-    applicant: any = {
-    token: '89nOpas|asdanjjh^&as',
-    first_name: '',
-    last_name: '',
-    email: '',
-    phone: '',
-    skills: [],
-    work_preference: '',
-    had_covid: null,
-    had_covid_at: '',
-    vaccinated: null,
-    vaccinated_at: '',
-    will_organize_devtalk: null,
-    devtalk_topic: '',
-    something_special: '',
-  };
-  */
+ 
 
   @Input() applicant!: any;
   @Output() changeSection = new EventEmitter();
@@ -46,10 +29,6 @@ export class CovidStuffComponent implements OnInit {
     this.hadCovid = this.applicant.had_covid;
     this.isVaccinated = this.applicant.vaccinated;
     this.workplace = this.applicant.work_preference;
-
-    console.log('[HAD COVID]?',this.hadCovid);
-    console.log('[IS VACCINATED]?',this.isVaccinated);
-    console.log('[WORKPLACE]?',this.workplace);
 
 
     if ( this.workplace !== '' )
@@ -83,15 +62,27 @@ export class CovidStuffComponent implements OnInit {
     }
 
 
+    this.checkUserInputs();
+
   }
 
 
   checkUserInputs(){
+    if (
+      this.applicant.had_covid !== null &&
+      this.applicant.vaccinated !== null &&
+      this.applicant.work_preference !== ''
+    )
+      this.canGoNext = true;
+    else this.canGoNext = false;
+
     
   }
 
   onChooseWorkPlace(workplace: string) {
     this.applicant.work_preference = workplace;
+
+    this.checkUserInputs();
   }
 
   onVaccination(ans: string) {
@@ -102,8 +93,9 @@ export class CovidStuffComponent implements OnInit {
       this.showVaccination = false;
       this.applicant.vaccinated = false;
       this.applicant.vaccinated_at = '';
-      console.log(this.applicant);
     }
+
+    this.checkUserInputs();
   }
 
   onContactCovid(ans: string) {
@@ -114,22 +106,24 @@ export class CovidStuffComponent implements OnInit {
       this.applicant.had_covid = false;
       this.showCovidLoc = false;
       this.applicant.had_covid_at = '';
-      console.log(this.applicant);
     }
+
+    this.checkUserInputs();
   }
 
   onMouseLeaveCovidLocation(event: any) {
     this.applicant.had_covid_at = event.target.value;
-    console.log('[COVID LOCATION]', this.applicant);
+
+    this.checkUserInputs();
   }
 
   onMouseLeaveVaccination(event: any) {
     this.applicant.vaccinated_at = event.target.value;
-    console.log('[VACCINATION]', this.applicant);
+
+    this.checkUserInputs();
   }
 
   setSection(section:any){
-    console.log(section);
     this.changeSection.emit(section);
   }
 

@@ -10,6 +10,8 @@ import { PaginationComponent } from './main/pagination/pagination.component';
 import { SkillsComponent } from './main/skills/skills.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CovidStuffComponent } from './main/covid-stuff/covid-stuff.component';
+import { AboutApplicantComponent } from './main/about-applicant/about-applicant.component';
+import { SubmitApplicationComponent } from './main/submit-application/submit-application.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CovidStuffComponent } from './main/covid-stuff/covid-stuff.component';
     CoordinatesComponent,
     PaginationComponent,
     SkillsComponent,
-    CovidStuffComponent
+    CovidStuffComponent,
+    AboutApplicantComponent,
+    SubmitApplicationComponent
   ],
   imports: [
     BrowserModule,

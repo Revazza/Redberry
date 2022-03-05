@@ -27,7 +27,7 @@
         type="email"
         name="email"
         placeholder="Email"
-        (keyup)="onChangeEmail($event)"
+        (change)="onChangeEmail($event)"
         value="{{ applicant.email }}"
       />
     </div>
@@ -41,8 +41,8 @@
         value="{{ applicant.number }}"
       />
     </div>
-    <!-- this div checks after mouse leave -->
-    <div (mouseleave)="onMouseLeave()" class="input-checker"></div>
+    
+
     <p class="error-msg">{{ errorMsg }}</p>
     <p id="requireName" class="required-fields">*</p>
     <p id="requireLastname" class="required-fields">*</p>

@@ -28,11 +28,9 @@ export class SkillsComponent implements OnInit {
 
     this.http.get(this.url+'/skills').subscribe( data => {
       this.skillsList = data;
-      // console.log('[SKILL LIST]',this.skillsList)
 
       for(let skill of this.applicant.skills)
       {
-        console.log(skill);
   
         for (let httpSkill of this.skillsList) {
           
@@ -127,11 +125,9 @@ export class SkillsComponent implements OnInit {
       }
     }
 
-    // console.log(this.applicant.skills);
   }
 
   onDeleteSkill(event:any){
-    //event.srcElement.id
 
     let deleteId = event.srcElement.id;
 
@@ -140,7 +136,6 @@ export class SkillsComponent implements OnInit {
       (skill: any) => skill.id !== parseInt(deleteId)
     );
 
-    // console.log('[this.skills]', this.applicant.skills);
 
     this.skillsArray = this.skillsArray.filter(
       (skill: any) => skill.id !== parseInt(deleteId)
