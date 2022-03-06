@@ -16,7 +16,6 @@ export class CoordinatesComponent implements OnInit {
   canGoNext: boolean = false;
 
   @Input() applicant!: any;
-  // ! is written
 
   constructor() {}
 
@@ -104,13 +103,6 @@ export class CoordinatesComponent implements OnInit {
         this.canGoNext = false;
     }
 
-    console.log('[FIRST NAME ERROR]', this.firstNameError);
-    console.log('[LAST NAME ERROR]', this.lastNameError);
-    console.log('[EMAIL ERROR]', this.emailError);
-    console.log('[PHONE NUMBER ERROR]', this.phoneNumberError);
-
-    console.log('');
-    console.log('');
   }
 
   onChangeSection(section: any) {

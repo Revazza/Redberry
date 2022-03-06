@@ -38,7 +38,6 @@ export class SubmitApplicationComponent implements OnInit {
     if (this.applicant.vaccinated_at === '')
       this.applicant.vaccinated_at = '2018-12-12';
 
-    console.log(this.applicant);
 
     this.showThanks = true;
 
@@ -47,7 +46,7 @@ export class SubmitApplicationComponent implements OnInit {
       this.changeSection.emit(0);
     }, 3000);
 
-    // this.http.post(this.url, this.applicant).subscribe();
+    this.http.post(this.url, this.applicant).subscribe();
   }
 
   onGoBack() {

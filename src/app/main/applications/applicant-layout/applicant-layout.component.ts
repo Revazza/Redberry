@@ -17,26 +17,8 @@ export class ApplicantLayoutComponent implements OnInit {
   applicantSkills:any = [];
   constructor(private http: HttpClient) {}
 
-  /*
-    token: '337286f8-e2c0-4828-a210-abd056453d16',
-    first_name: 'sandro',
-    last_name: '',
-    email: '',
-    phone: '',
-    skills: [],
-    work_preference: '',
-    had_covid: null,
-    had_covid_at: 'Empty',
-    vaccinated: null,
-    vaccinated_at: 'Empty',
-    will_organize_devtalk: null,
-    devtalk_topic: 'Empty',
-    something_special: 'Empty',
-
-  */
 
   ngOnInit(): void {
-    console.log(this.applicant);
 
     if (this.applicant.work_preference === 'from_home') {
       this.workplace = 'home';

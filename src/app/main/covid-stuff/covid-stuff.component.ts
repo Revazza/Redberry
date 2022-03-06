@@ -108,14 +108,6 @@ export class CovidStuffComponent implements OnInit {
     else
       this.canGoNext = false;
 
-    console.log('[CHECK WORKPLACE]',checkWorkPlace);
-    console.log('[CHECK COVID]',checkCovid);
-    console.log('[CHECK VACCINE]',checkVaccine)
-
-    console.log(this.applicant);
-
-    console.log('');
-    console.log('');
   }
 
   onChooseWorkPlace(workplace: string) {

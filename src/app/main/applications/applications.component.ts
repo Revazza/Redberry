@@ -32,7 +32,6 @@ export class ApplicationsComponent implements OnInit {
         this.id++;
       }
 
-      console.log(this.applicants);
     });
   }
 
