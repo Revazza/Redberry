@@ -6,24 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  section: number = -1;
+  section: number = 5;
   applicant: any = {
-    token: '337286f8-e2c0-4828-a210-abd056453d16',
-    first_name: 'sandro',
+    token: 'b26da651-59bb-4bf7-8a08-df1e7b750a11',
+    first_name: '',
     last_name: '',
     email: '',
     phone: '',
     skills: [],
     work_preference: '',
     had_covid: null,
-    had_covid_at: 'Empty',
+    had_covid_at: '',
     vaccinated: null,
-    vaccinated_at: 'Empty',
+    vaccinated_at: '',
     will_organize_devtalk: null,
-    devtalk_topic: 'Empty',
-    something_special: 'Empty',
+    devtalk_topic: '',
+    something_special: '',
   };
   paths = [
+    {
+      id: 0,
+      canGo: true,
+    },
     {
       id: 1,
       canGo: true,
@@ -47,7 +51,10 @@ export class MainComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+
+  }
 
   onChangeSection(section: any) {
     if (this.section < section) {
@@ -55,11 +62,6 @@ export class MainComponent implements OnInit {
 
       this.paths[objIndex].canGo = true;
     }
-
     this.section = section;
-  }
-
-  onAddCoordinates(coordinates: any) {
-    this.applicant = { ...this.applicant, ...coordinates };
   }
 }

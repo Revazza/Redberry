@@ -17,6 +17,9 @@ export class WelcomeComponent implements OnInit {
   onQuestionnaireClick(){
     this.changeSection.emit(1);
   }
+  onSubmitApplicationsClick(){
+    this.changeSection.emit(-1);
+  }
 
 
 

@@ -24,12 +24,11 @@ export class CovidStuffComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.applicant);
 
     this.hadCovid = this.applicant.had_covid;
     this.isVaccinated = this.applicant.vaccinated;
     this.workplace = this.applicant.work_preference;
-
+    
 
     if ( this.workplace !== '' )
     {
@@ -68,15 +67,55 @@ export class CovidStuffComponent implements OnInit {
 
 
   checkUserInputs(){
-    if (
-      this.applicant.had_covid !== null &&
-      this.applicant.vaccinated !== null &&
-      this.applicant.work_preference !== ''
-    )
-      this.canGoNext = true;
-    else this.canGoNext = false;
 
-    
+    let checkCovid = false;
+    let checkVaccine = false;
+    let checkWorkPlace = false;
+
+    if(this.applicant.had_covid !== null)
+    {
+      if(this.applicant.had_covid && this.applicant.had_covid_at !== '')
+      {
+        checkCovid = true;
+      }
+      else if(!this.applicant.had_covid)
+      {
+        this.applicant.had_covid_at = '';
+        checkCovid = true;
+      }
+    }
+
+    if(this.applicant.vaccinated !==null)
+    {
+      if(this.applicant.vaccinated && this.applicant.vaccinated_at !== '')
+      {
+        checkVaccine = true;
+      }
+      else if(!this.applicant.vaccinated)
+      {
+        this.applicant.vaccinated_at = '';
+        checkVaccine = true;
+      }
+    }
+
+    if(this.applicant.work_preference !== '')
+      checkWorkPlace = true;
+    else
+      checkWorkPlace = false;
+
+    if(checkVaccine && checkCovid && checkWorkPlace)
+      this.canGoNext = true;
+    else
+      this.canGoNext = false;
+
+    console.log('[CHECK WORKPLACE]',checkWorkPlace);
+    console.log('[CHECK COVID]',checkCovid);
+    console.log('[CHECK VACCINE]',checkVaccine)
+
+    console.log(this.applicant);
+
+    console.log('');
+    console.log('');
   }
 
   onChooseWorkPlace(workplace: string) {
@@ -113,7 +152,7 @@ export class CovidStuffComponent implements OnInit {
 
   onMouseLeaveCovidLocation(event: any) {
     this.applicant.had_covid_at = event.target.value;
-
+  
     this.checkUserInputs();
   }
 

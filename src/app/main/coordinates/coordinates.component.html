@@ -1,7 +1,10 @@
 <form id="coordinates" class="black-white_background">
   <div class="coordinates-wrapper">
     <h1>Hey, Rocketeer, what are your coordinates?</h1>
-    <div class="coordinates-input">
+    <div
+      class="coordinates-input"
+      [ngStyle]="{ border: firstNameError ? '1px solid #FE3B1F' : '1px solid #525557' }"
+    >
       <input
         required
         type="text"
@@ -11,7 +14,11 @@
         value="{{ applicant.first_name }}"
       />
     </div>
-    <div id="lastName" class="coordinates-input">
+    <div
+      id="lastName"
+      class="coordinates-input"
+      [ngStyle]="{ border: lastNameError ? '1px solid #FE3B1F' : '1px solid #525557' }"
+    >
       <input
         required
         type="text"
@@ -21,7 +28,9 @@
         value="{{ applicant.last_name }}"
       />
     </div>
-    <div id="email" class="coordinates-input">
+    <div id="email" class="coordinates-input" 
+      [ngStyle]="{ border: emailError ? '1px solid #FE3B1F': '1px solid #525557'}"
+    >
       <input
         required
         type="email"
@@ -31,7 +40,14 @@
         value="{{ applicant.email }}"
       />
     </div>
-    <div id="phoneNumber" class="coordinates-input">
+    <p id="fnError" class="error-msg" *ngIf="firstNameError">*first name is required</p>
+    <p id="lnError" class="error-msg" *ngIf="lastNameError">*lastname should include 2 or more characters</p>
+    <p *ngIf="emailError" id="eError" class="error-msg">*incorrect email</p>
+    <p *ngIf="phoneNumberError" id="pError" class="error-msg">*incorrect number</p>
+
+    <div id="phoneNumber" class="coordinates-input" 
+      [ngStyle]="{ border: phoneNumberError ? '1px solid #FE3B1F': '1px solid #525557'}"
+    >
       <input
         type="number"
         name="phone"
@@ -41,9 +57,7 @@
         value="{{ applicant.number }}"
       />
     </div>
-    
 
-    <p class="error-msg">{{ errorMsg }}</p>
     <p id="requireName" class="required-fields">*</p>
     <p id="requireLastname" class="required-fields">*</p>
     <p id="requireEmail" class="required-fields">*</p>
@@ -59,7 +73,9 @@
     </p>
   </div>
 
-  <app-pagination [canGoNext]="canGoNext" (setSection)="onChangeSection($event)" [currentSection]="1" ></app-pagination>
+  <app-pagination
+    [canGoNext]="canGoNext"
+    (setSection)="onChangeSection($event)"
+    [currentSection]="1"
+  ></app-pagination>
 </form>
-
-

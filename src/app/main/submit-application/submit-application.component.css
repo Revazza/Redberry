@@ -56,10 +56,22 @@
 
 
 #thank{
-    font-size: 100px !important;
-    width: 1000px !important;
+    position: absolute !important;
+    width: 1166px !important;
+    height: 191px !important;
+    left: 470px !important;
+    top: 344px !important;
+
+    font-family: Rowdies !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 96px !important;
+
     text-decoration-line: none !important;
-    left: 560px !important;
-    top: 370px !important;
+    cursor: initial !important;
+
+    /* Redberry Red */
+
+    color: #FE3B1F !important;
 }
 

@@ -13,6 +13,7 @@ import { CovidStuffComponent } from './main/covid-stuff/covid-stuff.component';
 import { AboutApplicantComponent } from './main/about-applicant/about-applicant.component';
 import { SubmitApplicationComponent } from './main/submit-application/submit-application.component';
 import { ApplicationsComponent } from './main/applications/applications.component';
+import { ApplicantLayoutComponent } from './main/applications/applicant-layout/applicant-layout.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ApplicationsComponent } from './main/applications/applications.componen
     CovidStuffComponent,
     AboutApplicantComponent,
     SubmitApplicationComponent,
-    ApplicationsComponent
+    ApplicationsComponent,
+    ApplicantLayoutComponent
   ],
   imports: [
     BrowserModule,

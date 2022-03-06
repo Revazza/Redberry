@@ -19,7 +19,7 @@ export class PaginationComponent implements OnInit {
    
   }
 
- 
+  
   
   onClickNext() {    
     
