@@ -54,3 +54,12 @@
     cursor: pointer;
 }
 
+
+#thank{
+    font-size: 100px !important;
+    width: 1000px !important;
+    text-decoration-line: none !important;
+    left: 560px !important;
+    top: 370px !important;
+}
+

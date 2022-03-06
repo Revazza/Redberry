@@ -1,0 +1,322 @@
+
+
+
+.submitted-app-wrapper{
+    width: 1903px;
+    min-height: 1080px;
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+
+}
+
+.submitted-apps{
+    width: 1154px;
+    min-height: 842px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.submitted-apps h1{
+    margin: 0;
+    font-family: Rowdies;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 70px;
+    letter-spacing: 0.17em;
+
+    color: #FFFFFF;
+    margin-bottom: 55px;
+    padding-left: 25px;
+}
+
+
+.sub-apps-wrapper{
+    margin-top: 15px;
+    width: 1150px;
+    min-height: fit-content;
+}
+
+.sub-app-list{
+    width: 1154px;
+    height: 60px;
+    background-color: #FE3B1F;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sub-app-list p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    left: 30px;
+    position: absolute;
+}
+
+
+.dropdown{
+    
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.active{
+    
+    background-color: #F05039;
+    transform: rotate(180deg);
+}
+
+
+.app-information{
+    
+    width: calc(1153px - 202px);
+    height: 1080px;
+    background-color: #FFFFFF;
+    border: 1px solid #F05039;
+    display: flex;
+    justify-content: space-between;
+    padding:36px 61px 150px 140px;
+}
+
+.right-divs,.left-divs{
+    
+    position: relative;
+    width: 45%;
+    min-height: 400px;
+}
+
+.personal-inf{
+    
+    position: absolute;
+    width: 100%;
+    height: 299px;
+}
+
+.red-p{
+    
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+
+    /* Redberry Red */
+
+    color: #FE3B1F;
+}
+
+
+.personal-inf-wrapper ,.skillset{
+    position: absolute;
+    top:80px;
+    height: 180px;
+    width: 100%;
+    display: flex;
+}
+
+
+.personal-inf-wrapper div,.skillset div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.personal-inf-wrapper p,.skillset p{
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #000000;
+    margin: 0;
+}
+
+.pDiv p{
+    margin-left: 40px;
+    font-weight: normal;
+}
+
+.covid-situation,.insights{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+    top: 300px;
+}
+
+.question-p{
+    margin-top: 23px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000c5;
+}
+
+.covid-situation ul{
+    padding-left: 15px;
+}
+
+.covid-situation li{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+    margin-bottom: 9px;
+    list-style: none;
+}
+
+.circle{
+    height: 9px;
+    width: 9px;
+    border: 1px solid #464646;
+    border-radius: 100%;
+}
+
+.covid-li-wrapper{
+    display: flex;
+}
+.covid-li-wrapper p{
+    margin: 0;
+    margin-left: 10px;
+}
+
+
+.had-covid{
+    position: absolute;
+    top: 510px;
+}
+
+.had-covid-ans p,.vaccinated-ans p {
+    margin: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px !important;
+    padding-left: 7px;
+}
+
+.had-covid-ans,.vaccinated-ans{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 13px;
+}
+
+
+.when-had-covid{
+    position: absolute;
+    top: 640px;
+}
+
+.when-had-covid p,
+.had-covid p,
+.vaccinated p,
+.vaccinated-when p,
+.about-devtalk p,
+.something-special p{
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000c5;
+}
+
+.covid-date-wrapper{
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.covid-date-wrapper p{
+    position: absolute;
+    left: 60px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+}
+.covid-date-wrapper img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 23px;
+}
+
+.vaccinated{
+    position: absolute;
+    top: 820px;
+}
+
+.vaccinated-when{
+    position: absolute;
+    top: 970px;
+}
+
+
+.about-devtalk{
+    position: absolute;
+    width: 100%;
+
+    height: 250px;
+    top: 510px;
+}
+
+.devtalk-ans{
+    position: absolute;
+    top: 70px;
+    width: calc(100% - 20px);
+    height: 130px;
+    border: 1px solid #525557;
+    padding: 15px 10px;
+}
+.devtalk-ans p{
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+
+    color: #3A3A3A;
+}
+
+.something-special{
+    position: absolute;
+    top: 780px;
+    width: 100%;
+}
+
+#specialAns{
+    height: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

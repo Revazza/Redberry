@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  section: number = 1;
+  section: number = -1;
   applicant: any = {
     token: '337286f8-e2c0-4828-a210-abd056453d16',
-    first_name: '',
+    first_name: 'sandro',
     last_name: '',
     email: '',
     phone: '',

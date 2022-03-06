@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CovidStuffComponent } from './main/covid-stuff/covid-stuff.component';
 import { AboutApplicantComponent } from './main/about-applicant/about-applicant.component';
 import { SubmitApplicationComponent } from './main/submit-application/submit-application.component';
+import { ApplicationsComponent } from './main/applications/applications.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SubmitApplicationComponent } from './main/submit-application/submit-app
     SkillsComponent,
     CovidStuffComponent,
     AboutApplicantComponent,
-    SubmitApplicationComponent
+    SubmitApplicationComponent,
+    ApplicationsComponent
   ],
   imports: [
     BrowserModule,

@@ -20,21 +20,27 @@ export class SubmitApplicationComponent implements OnInit {
 
   url: string =
     'https://bootcamp-2022.devtest.ge/api/application?token=337286f8-e2c0-4828-a210-abd056453d16';
-  urlGet: string =
-    'https://bootcamp-2022.devtest.ge/api/applications?token=337286f8-e2c0-4828-a210-abd056453d16';
+
+  showThanks:boolean = false;  
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
 
+
   onSubmitApplicant() {
     console.log(this.applicant);
+    this.showThanks = true;
 
-    this.http
-      .post(this.url, this.applicant)
-      .subscribe((response) => console.log(response));
+    setTimeout( () =>{
+      this.showThanks = false;
+      this.changeSection.emit(0);
+    },2000)
 
-    this.http.get(this.urlGet).subscribe((data) => console.log(data));
+    // this.http
+    //   .post(this.url, this.applicant)
+    //   .subscribe();
+
   }
 
   onGoBack() {
