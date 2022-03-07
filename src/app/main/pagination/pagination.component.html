@@ -1,12 +1,35 @@
-
 <div class="pagination" id="covid-stuff">
-    <div (click)="onClickPrev()" id="prev" class="prev-next"></div>
+  <div (click)="onClickPrev()" id="prev" class="prev-next"></div>
 
-    <div [ngClass]=" currentSection > 0 ? 'circles active':'circles'" id="first" ></div>
-    <div [ngClass]=" currentSection > 1 ? 'circles active':'circles'" id="second" class="circles"></div>
-    <div [ngClass]=" currentSection > 2 ? 'circles active':'circles'" id="third" class="circles"></div>
-    <div [ngClass]=" currentSection > 3 ? 'circles active':'circles'" id="fourth" class="circles"></div>
-    <div [ngClass]=" currentSection > 4 ? 'circles active':'circles'" id="fifth" class="circles"></div>
-    
-    <div (click)="onClickNext()" id="next" class="prev-next"></div>
+  <div
+    [ngClass]="currentSection > 0 ? 'circles active' : 'circles'"
+    id="first"
+    (click)="onCircleClick(1)"
+  ></div>
+  <div
+    [ngClass]="currentSection > 1 ? 'circles active' : 'circles'"
+    id="second"
+    (click)="onCircleClick(2)"
+    class="circles"
+  ></div>
+  <div
+    [ngClass]="currentSection > 2 ? 'circles active' : 'circles'"
+    id="third"
+    (click)="onCircleClick(3)"
+    class="circles"
+  ></div>
+  <div
+    [ngClass]="currentSection > 3 ? 'circles active' : 'circles'"
+    id="fourth"
+    (click)="onCircleClick(4)"
+    class="circles"
+  ></div>
+  <div
+    [ngClass]="currentSection > 4 ? 'circles active' : 'circles'"
+    id="fifth"
+    (click)="onCircleClick(5)"
+    class="circles"
+  ></div>
+
+  <div (click)="onClickNext()" id="next" class="prev-next"></div>
 </div>

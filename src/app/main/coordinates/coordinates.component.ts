@@ -6,7 +6,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./coordinates.component.css'],
 })
 export class CoordinatesComponent implements OnInit {
-  @Output() changeSection = new EventEmitter();
 
   firstNameError: boolean = false;
   lastNameError: boolean = false;
@@ -16,6 +15,7 @@ export class CoordinatesComponent implements OnInit {
   canGoNext: boolean = false;
 
   @Input() applicant!: any;
+  @Output() canGo = new EventEmitter();
 
   constructor() {}
 
@@ -97,15 +97,22 @@ export class CoordinatesComponent implements OnInit {
         !this.lastNameError &&
         !this.emailError
       ) {
-        this.canGoNext = true;
+
+        this.canGo.emit({
+          section:2,
+          canGo:true,
+        })
       }
       else
-        this.canGoNext = false;
+      {
+        this.canGo.emit({
+          section: 2,
+          canGo: false,
+        });
+      }
     }
 
   }
 
-  onChangeSection(section: any) {
-    this.changeSection.emit(section);
-  }
+  
 }

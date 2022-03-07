@@ -8,12 +8,12 @@ import { Component,Output,EventEmitter,Input ,OnInit } from '@angular/core';
 export class CovidStuffComponent implements OnInit {
  
 
+  
   @Input() applicant!: any;
-  @Output() changeSection = new EventEmitter();
+  @Output() canGo = new EventEmitter();
 
   showCovidLoc: boolean = false;
   showVaccination: boolean = false;
-  canGoNext: boolean = false;
 
   hadCovid :boolean = false;
   isVaccinated:boolean = false;
@@ -104,9 +104,19 @@ export class CovidStuffComponent implements OnInit {
       checkWorkPlace = false;
 
     if(checkVaccine && checkCovid && checkWorkPlace)
-      this.canGoNext = true;
+    {
+      this.canGo.emit({
+        section:4,
+        canGo:true,
+      })
+    }
     else
-      this.canGoNext = false;
+    {
+      this.canGo.emit({
+        section: 4,
+        canGo: false,
+      });
+    }
 
   }
 
@@ -152,10 +162,6 @@ export class CovidStuffComponent implements OnInit {
     this.applicant.vaccinated_at = event.target.value;
 
     this.checkUserInputs();
-  }
-
-  setSection(section:any){
-    this.changeSection.emit(section);
   }
 
 

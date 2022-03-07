@@ -3,37 +3,49 @@
 
 <app-coordinates
   *ngIf="section === 1"
-  (changeSection)="onChangeSection($event)"
   [applicant]="applicant"
+  (canGo)="onCanGo($event)"
 >
 </app-coordinates>
 
 <app-skills
   *ngIf="section === 2"
-  (changeSection)="onChangeSection($event)"
   [applicant]="applicant"
+  (canGo)="onCanGo($event)"
 ></app-skills>
 
 <app-covid-stuff
   *ngIf="section === 3"
-  (changeSection)="onChangeSection($event)"
   [applicant]="applicant"
+  (canGo)="onCanGo($event)"
 >
 </app-covid-stuff>
 
 <app-about-applicant
   *ngIf="section === 4"
-  (changeSection)="onChangeSection($event)"
   [applicant]="applicant"
+  (canGo)="onCanGo($event)"
 >
 </app-about-applicant>
 
-<app-submit-application 
-[applicant]="applicant" *ngIf="section === 5" 
-(changeSection) = "onChangeSection($event)">
-
+<app-submit-application
+  [applicant]="applicant"
+  *ngIf="section === 5"
+  (changeSection)="onChangeSection($event)"
+  (clearValues)="clearValues()"
+>
 </app-submit-application>
 
-<app-applications *ngIf="section === -1" (changeSection)="onChangeSection($event)" ></app-applications>
+<app-applications
+  *ngIf="section === -1"
+  (changeSection)="onChangeSection($event)"
+></app-applications>
 
-
+<div [ngClass]="section === 3 ? 'thirdSection' : section === 4 ? 'fourthSection' : '' ">
+  <app-pagination
+    *ngIf="section !== 0 && section !== -1 && section !== 5"
+    (setSection)="onChangeSection($event)"
+    [paths]="paths"
+    [currentSection]="section"
+  ></app-pagination>
+</div>

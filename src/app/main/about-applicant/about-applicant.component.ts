@@ -7,10 +7,9 @@ import { Component, Output, Input, EventEmitter, OnInit } from '@angular/core';
 })
 export class AboutApplicantComponent implements OnInit {
 
-  @Output() changeSection = new EventEmitter();
   @Input() applicant!: any;
+  @Output() canGo = new EventEmitter();
 
-  canGoNext: boolean = false;
   devtalkTxt:string = '';
   specialTxt:string = '';
 
@@ -47,8 +46,17 @@ export class AboutApplicantComponent implements OnInit {
       this.applicant.devtalk_topic.length !== 0 &&
       this.applicant.something_special.length !== 0
     ) {
-      this.canGoNext = true;
-    } else this.canGoNext = false;
+      this.canGo.emit({
+        section:5,
+        canGo:true,
+      })
+
+    } else {
+      this.canGo.emit({
+        section: 5,
+        canGo: false,
+      });
+    }
 
   }
 
@@ -71,8 +79,5 @@ export class AboutApplicantComponent implements OnInit {
     this.checkUserInputs();
   }
 
-  setSection(section: any) {
-    this.changeSection.emit(section);
-    console.log(this.applicant);
-  }
+  
 }

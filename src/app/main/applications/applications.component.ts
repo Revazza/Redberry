@@ -9,7 +9,7 @@ import { Component, Injectable,Output,EventEmitter ,OnInit } from '@angular/core
 @Injectable()
 export class ApplicationsComponent implements OnInit {
   url: string =
-    'https://bootcamp-2022.devtest.ge/api/applications?token=b26da651-59bb-4bf7-8a08-df1e7b750a11';
+    'https://bootcamp-2022.devtest.ge/api/applications?token=957c8534-c6fa-46d4-ba00-a457f1d1e041';
 
   id: number = 1;
 
@@ -31,7 +31,6 @@ export class ApplicationsComponent implements OnInit {
         });
         this.id++;
       }
-
     });
   }
 

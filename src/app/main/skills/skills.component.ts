@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class SkillsComponent implements OnInit {
 
   @Input() applicant!:any;
+  @Output() canGo = new EventEmitter();
 
   skillsList: any = [];
   url: string = 'https://bootcamp-2022.devtest.ge/api';
@@ -18,9 +19,6 @@ export class SkillsComponent implements OnInit {
   skillsArray:any = [];
   choosenSkill:any = {};
   experience:any = '';
-  canGoNext:boolean = false;
-
-  @Output() changeSection = new EventEmitter();
 
   constructor(private http: HttpClient ) {}
 
@@ -28,7 +26,8 @@ export class SkillsComponent implements OnInit {
 
     this.http.get(this.url+'/skills').subscribe( data => {
       this.skillsList = data;
-
+      
+      //in order to keep choosen information
       for(let skill of this.applicant.skills)
       {
   
@@ -48,9 +47,19 @@ export class SkillsComponent implements OnInit {
       }
 
       if(this.skillsArray.length !== 0)
-        this.canGoNext = true;
+      {
+        this.canGo.emit({
+          section:3,
+          canGo:true,
+        })
+      }
+      else{
+        this.canGo.emit({
+          section: 3,
+          canGo: false,
+        });
+      }
     });
-
 
   }
 
@@ -77,7 +86,6 @@ export class SkillsComponent implements OnInit {
   }
 
   exctractNumberFromExp(exp:string){
-
     const numbers = ['1','2','3','4','5','6','7','8','9'];
 
     for(let i = 0;i < exp.length;i++)
@@ -93,16 +101,19 @@ export class SkillsComponent implements OnInit {
 
   onAddSkill(){
 
+    //if no experience was written , we assume that experience is 0.
     if(this.experience.length === 0)
       this.experience = 0;
 
     if(this.currentSkill !== 'skills')
     {
-
+      //checking to avoid DUPLICATES in skills array
       const filteredArr = this.applicant.skills.filter(
         (skill: any) => skill.id === this.choosenSkill.id
       );
       
+      //if no such skill was added earlier, add one!
+
       if (filteredArr.length === 0) {
         const exp = this.exctractNumberFromExp(this.experience);
 
@@ -117,11 +128,30 @@ export class SkillsComponent implements OnInit {
           title:this.currentSkill,
         }
 
+        /*  
+          Pushing Full info in skills array in order to display full information. example: {
+            id:2,
+            title:CSS,
+            experience:2
+          }
 
+          we are dividing this steps because we need only ID and EXPERIENCE in applicant.skills
+
+        */
         this.skillsArray.push(fullInfo)
         this.applicant.skills.push(this.choosenSkill);
-        this.canGoNext = true;
 
+        this.canGo.emit({
+          section:3,
+          canGo:true,
+        })
+
+      }
+      else{
+        this.canGo.emit({
+          section:3,
+          canGo:false,
+        })
       }
     }
 
@@ -143,12 +173,14 @@ export class SkillsComponent implements OnInit {
 
 
     if(this.skillsArray.length === 0)
-      this.canGoNext = false;
+    {
+      this.canGo.emit({
+        section:3,
+        canGo:false,
+      })
+    }
   }
 
 
-  setSection(section:any){
-    this.changeSection.emit(section);
-  }
 
 }

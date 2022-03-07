@@ -15,11 +15,13 @@ import { HttpClient } from '@angular/common/http';
 })
 @Injectable()
 export class SubmitApplicationComponent implements OnInit {
-  @Input() applicant!: any;
+  @Input() applicant: any;
+
+  @Output() clearValues = new EventEmitter();
   @Output() changeSection = new EventEmitter();
 
   url: string =
-    'https://bootcamp-2022.devtest.ge/api/application?token=b26da651-59bb-4bf7-8a08-df1e7b750a11';
+    'https://bootcamp-2022.devtest.ge/api/application?token=957c8534-c6fa-46d4-ba00-a457f1d1e041';
 
   showThanks: boolean = false;
 
@@ -29,8 +31,7 @@ export class SubmitApplicationComponent implements OnInit {
 
   onSubmitApplicant() {
 
-
-    //i was trying to delete fields that wasn't fulfilled with 'delete obj.deletionName' but with no success, in 2018 there was no corona virus,so if applicant cheats we'll deal with him/her behaviour (:
+    //i was trying to delete fields that wasn't fulfilled with 'delete obj.deletionName' but with no success,so in 2018 there was no corona virus,so if applicant cheats we'll deal with him/her behaviour (:
 
     if (this.applicant.phone === '') this.applicant.phone = '+995000000000';
     if (this.applicant.had_covid_at === '')
@@ -38,15 +39,17 @@ export class SubmitApplicationComponent implements OnInit {
     if (this.applicant.vaccinated_at === '')
       this.applicant.vaccinated_at = '2018-12-12';
 
-
     this.showThanks = true;
+
+    this.http.post(this.url, this.applicant).subscribe();
 
     setTimeout(() => {
       this.showThanks = false;
+
       this.changeSection.emit(0);
     }, 3000);
 
-    this.http.post(this.url, this.applicant).subscribe();
+    this.clearValues.emit();
   }
 
   onGoBack() {
